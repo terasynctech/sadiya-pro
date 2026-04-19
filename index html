@@ -6,16 +6,17 @@
 
 <title>Sadiya Zehra | TeraSyncTech</title>
 
-<!-- ✅ SOCIAL PREVIEW (FIXED) -->
+<!-- ✅ SOCIAL PREVIEW (FIXED FOR THIS REPO) -->
 <meta property="og:title" content="Sadiya Zehra | TeraSyncTech">
 <meta property="og:description" content="Helping Businesses Grow with Smart Digital Solutions 🚀">
-<meta property="og:image" content="https://terasynctech.github.io/terasynctech-card/logo.png?v=7">
-<meta property="og:url" content="https://terasynctech.github.io/terasynctech-card/sadiya-pro/">
+<meta property="og:image" content="https://terasynctech.github.io/sadiya-pro/logo.png?v=8">
+<meta property="og:url" content="https://terasynctech.github.io/sadiya-pro/">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://terasynctech.github.io/terasynctech-card/logo.png?v=7">
+<meta name="twitter:image" content="https://terasynctech.github.io/sadiya-pro/logo.png?v=8">
 
-<link rel="icon" href="../logo.png">
+<!-- ✅ IMPORTANT FIX -->
+<link rel="icon" href="logo.png">
 
 <style>
 
@@ -43,7 +44,7 @@ body {
     position:absolute;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.6);
+    background:rgba(0,0,0,0.55);
 }
 
 .hero-content {
@@ -77,7 +78,7 @@ h1 {
 }
 
 .tagline {
-    color: #ccc;
+    color: #ddd;
     font-size: 15px;
 }
 
@@ -182,7 +183,7 @@ li {
 <div class="hero">
 <div class="hero-content">
 
-<img src="../logo.png" class="logo">
+<img src="logo.png" class="logo">
 
 <h1>Sadiya Zehra</h1>
 <p>Business Development Manager</p>
@@ -203,17 +204,14 @@ Helping Businesses Grow with Smart Digital Solutions 🚀
 <!-- CONTENT -->
 <div class="section">
 
-<!-- ABOUT -->
 <div class="card">
 <h2>👩‍💼 About</h2>
 <p>
 Sadiya Zehra is a Business Development Manager at TeraSyncTech,
-helping businesses adopt digital transformation through ERP solutions,
-automation, and marketing strategies that drive real growth.
+helping businesses grow using ERP software, automation, and digital marketing strategies.
 </p>
 </div>
 
-<!-- PRODUCTS -->
 <div class="card">
 <h2>🚀 Our Products</h2>
 <ul>
@@ -224,27 +222,24 @@ automation, and marketing strategies that drive real growth.
 </ul>
 </div>
 
-<!-- SERVICES -->
 <div class="card">
 <h2>💼 Our Services</h2>
 <ul>
 <li>Website Development</li>
-<li>Digital Marketing (SEO, Ads, Google Presence)</li>
-<li>Business Automation Solutions</li>
+<li>Digital Marketing (SEO, Ads)</li>
+<li>Business Automation</li>
 </ul>
 </div>
 
-<!-- WEBSITE -->
 <div class="card">
 <h2>🌐 Explore More</h2>
 <a class="btn" href="https://www.terasynctech.com" target="_blank">Visit Website</a>
 </div>
 
-<!-- CONTACT -->
 <div class="card">
 <h2>📞 Contact</h2>
 <a class="btn" href="https://share.google/MULAO32KrA4XGuGOS" target="_blank">📍 Location</a>
-<a class="btn" href="../sadiya.vcf" download>📥 Save Contact</a>
+<a class="btn" href="contact.vcf" download>📥 Save Contact</a>
 </div>
 
 </div>
@@ -253,7 +248,6 @@ automation, and marketing strategies that drive real growth.
 Powered by TeraSyncTech 🚀
 </div>
 
-<!-- RIPPLE SCRIPT -->
 <script>
 document.querySelectorAll(".btn").forEach(button => {
     button.addEventListener("click", function (e) {
