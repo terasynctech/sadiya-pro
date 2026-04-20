@@ -1,4 +1,4 @@
-<!DOCTYPE html>     
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,168 +6,80 @@
 
 <title>Sadiya Zehra | TeraSyncTech</title>
 
-<!-- ✅ SOCIAL PREVIEW (FIXED FOR THIS REPO) -->
 <meta property="og:title" content="Sadiya Zehra | TeraSyncTech">
-<meta property="og:description" content="Helping Businesses Grow with Smart Digital Solutions 🚀">
-<meta property="og:image" content="https://terasynctech.github.io/sadiya-pro/logo.png?v=8">
+<meta property="og:description" content="Grow Your Business with Smart ERP & Digital Solutions 🚀">
+<meta property="og:image" content="https://terasynctech.github.io/sadiya-pro/logo.png?v=10">
 <meta property="og:url" content="https://terasynctech.github.io/sadiya-pro/">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://terasynctech.github.io/sadiya-pro/logo.png?v=8">
-
-<!-- ✅ IMPORTANT FIX -->
 <link rel="icon" href="logo.png">
 
 <style>
 
-/* ===== BODY ===== */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #fff;
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#0f172a;
+    color:#fff;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero {
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1551434678-e076c223a692') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
+    height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
 }
 
-.hero::after {
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.55);
+.hero h1 {
+    font-size:32px;
+    margin-bottom:10px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    animation: fadeUp 1s ease-in-out;
+.hero p {
+    color:#cbd5f5;
 }
 
-@keyframes fadeUp {
-    from {opacity:0; transform:translateY(30px);}
-    to {opacity:1; transform:translateY(0);}
-}
-
-/* ===== LOGO ===== */
-.logo {
-    width: 110px;
-    margin-bottom: 10px;
-    animation: float 3s infinite;
-}
-
-@keyframes float {
-    0% {transform: translateY(0);}
-    50% {transform: translateY(-10px);}
-    100% {transform: translateY(0);}
-}
-
-/* ===== TEXT ===== */
-h1 {
-    margin: 10px 0;
-    font-size: 28px;
-}
-
-.tagline {
-    color: #ddd;
-    font-size: 15px;
-}
-
-/* ===== BADGE ===== */
-.badge {
-    margin-top: 10px;
-    display: inline-block;
-    padding: 6px 14px;
-    border-radius: 20px;
-    background: rgba(0,198,255,0.2);
-    color: #00c6ff;
-    font-size: 13px;
-}
-
-/* ===== BUTTON ===== */
 .btn {
     display:inline-block;
-    margin:8px;
+    margin:10px;
     padding:12px 22px;
     border-radius:30px;
     text-decoration:none;
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
     color:white;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
-    position:relative;
-    overflow:hidden;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    transform:scale(1.08);
-}
-
-/* SHINE */
-.btn::before {
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
-    left:-100%;
-    transition:0.5s;
-}
-.btn:hover::before {
-    left:100%;
-}
-
-/* RIPPLE */
-.ripple {
-    position:absolute;
-    border-radius:50%;
-    transform:scale(0);
-    animation:ripple 0.6s linear;
-    background:rgba(255,255,255,0.6);
-}
-@keyframes ripple {
-    to {transform:scale(4); opacity:0;}
-}
-
-/* ===== SECTION ===== */
 .section {
-    padding:30px 20px;
-    max-width:420px;
+    padding:40px 20px;
+    max-width:900px;
     margin:auto;
 }
 
-/* ===== CARD ===== */
+.cards {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
 .card {
-    background: rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.05);
     padding:20px;
-    border-radius:20px;
-    margin-top:20px;
+    border-radius:15px;
     backdrop-filter:blur(10px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition:0.3s;
 }
 
-/* ===== TITLES ===== */
+.card:hover {
+    transform:translateY(-5px);
+}
+
 h2 {
-    color:#00c6ff;
+    color:#38bdf8;
 }
 
-/* ===== LIST ===== */
-ul {
-    padding-left:20px;
-}
-li {
-    margin:8px 0;
-}
-
-/* ===== FOOTER ===== */
 .footer {
     text-align:center;
     padding:20px;
@@ -181,92 +93,63 @@ li {
 
 <!-- HERO -->
 <div class="hero">
-<div class="hero-content">
+<div>
+<img src="logo.png" width="90">
 
-<img src="logo.png" class="logo">
-
-<h1>Sadiya Zehra</h1>
-<p>Business Development Manager</p>
-
-<div class="badge">TeraSyncTech</div>
-
-<p class="tagline">
-Helping Businesses Grow with Smart Digital Solutions 🚀
-</p>
+<h1>Grow Your Business with Smart ERP Solutions</h1>
+<p>Sadiya Zehra | Business Development Manager</p>
 
 <a class="btn" href="tel:+917549126937">📞 Call</a>
 <a class="btn" href="https://wa.me/917549126937">💬 WhatsApp</a>
-<a class="btn" href="https://www.terasynctech.com" target="_blank">🌐 Website</a>
 
 </div>
 </div>
 
-<!-- CONTENT -->
+<!-- PRODUCTS -->
 <div class="section">
-
-<div class="card">
-<h2>👩‍💼 About</h2>
-<p>
-Sadiya Zehra is a Business Development Manager at TeraSyncTech,
-helping businesses grow using ERP software, automation, and digital marketing strategies.
-</p>
-</div>
-
-<div class="card">
 <h2>🚀 Our Products</h2>
-<ul>
-<li>TeraTrade ERP</li>
-<li>TeraCampus ERP</li>
-<li>TeraHotel ERP</li>
-<li>TeraCard (Digital Business Card)</li>
-</ul>
+
+<div class="cards">
+<div class="card">TeraTrade ERP</div>
+<div class="card">TeraCampus ERP</div>
+<div class="card">TeraHotel ERP</div>
+<div class="card">TeraCard</div>
+</div>
 </div>
 
-<div class="card">
+<!-- SERVICES -->
+<div class="section">
 <h2>💼 Our Services</h2>
+
+<div class="cards">
+<div class="card">Website Development</div>
+<div class="card">Digital Marketing</div>
+<div class="card">Automation Solutions</div>
+</div>
+</div>
+
+<!-- WHY -->
+<div class="section">
+<h2>⭐ Why Choose Us</h2>
 <ul>
-<li>Website Development</li>
-<li>Digital Marketing (SEO, Ads)</li>
-<li>Business Automation</li>
+<li>✔ Fast Implementation</li>
+<li>✔ Expert Team</li>
+<li>✔ Scalable Solutions</li>
+<li>✔ Result Driven</li>
 </ul>
 </div>
 
-<div class="card">
-<h2>🌐 Explore More</h2>
-<a class="btn" href="https://www.terasynctech.com" target="_blank">Visit Website</a> 
-</div>
+<!-- CTA -->
+<div class="section">
+<h2>🚀 Let’s Grow Your Business</h2>
 
-<div class="card">
-<h2>📞 Contact</h2>
-<a class="btn" href="https://share.google/MULAO32KrA4XGuGOS" target="_blank">📍 Location</a>
-<a class="btn" href="contact.vcf" download>📥 Save Contact</a>
-</div>
-
+<a class="btn" href="https://www.terasynctech.com" target="_blank">Visit Website</a>
+<a class="btn" href="contact.vcf" download>Save Contact</a>
 </div>
 
 <div class="footer">
 Powered by TeraSyncTech 🚀
 </div>
-
-<script>
-document.querySelectorAll(".btn").forEach(button => {
-    button.addEventListener("click", function (e) {
-        const circle = document.createElement("span");
-        const diameter = Math.max(this.clientWidth, this.clientHeight);
-        const radius = diameter / 2;
-
-        circle.style.width = circle.style.height = diameter + "px";
-        circle.style.left = (e.clientX - this.getBoundingClientRect().left - radius) + "px";
-        circle.style.top = (e.clientY - this.getBoundingClientRect().top - radius) + "px";
-        circle.classList.add("ripple");
-
-        const ripple = this.getElementsByClassName("ripple")[0];
-        if (ripple) ripple.remove();
-
-        this.appendChild(circle);
-    });
-});
-</script>
 
 </body>
 </html>
