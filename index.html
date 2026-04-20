@@ -8,56 +8,133 @@
 
 <meta property="og:title" content="Sadiya Zehra | TeraSyncTech">
 <meta property="og:description" content="Grow Your Business with Smart ERP & Digital Solutions 🚀">
-<meta property="og:image" content="https://terasynctech.github.io/sadiya-pro/logo.png?v=10">
+<meta property="og:image" content="https://terasynctech.github.io/sadiya-pro/logo.png?v=11">
 <meta property="og:url" content="https://terasynctech.github.io/sadiya-pro/">
 
 <link rel="icon" href="logo.png">
 
 <style>
 
+/* ===== BODY ===== */
 body {
     margin:0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI',sans-serif;
     background:#0f172a;
     color:#fff;
 }
 
-/* HERO */
+/* ===== HERO SLIDER ===== */
 .hero {
     height:100vh;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.slide {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    animation:slideShow 18s infinite;
+}
+
+.slide:nth-child(1){animation-delay:0s;}
+.slide:nth-child(2){animation-delay:6s;}
+.slide:nth-child(3){animation-delay:12s;}
+
+@keyframes slideShow {
+    0%{opacity:0;}
+    5%{opacity:1;}
+    30%{opacity:1;}
+    35%{opacity:0;}
+    100%{opacity:0;}
+}
+
+/* Overlay */
+.hero::after {
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    top:0;
+    left:0;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
     text-align:center;
-    padding:20px;
+    z-index:2;
+    width:90%;
 }
 
-.hero h1 {
-    font-size:32px;
+.logo {
+    width:90px;
     margin-bottom:10px;
+    animation:float 3s infinite;
 }
 
-.hero p {
+@keyframes float {
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+h1 {
+    font-size:30px;
+}
+
+.tagline {
     color:#cbd5f5;
 }
 
+/* ===== BUTTON ===== */
 .btn {
     display:inline-block;
     margin:10px;
-    padding:12px 22px;
+    padding:12px 24px;
     border-radius:30px;
     text-decoration:none;
-    background:linear-gradient(90deg,#00c6ff,#0072ff);
     color:white;
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+    position:relative;
+    overflow:hidden;
+    transition:0.3s;
 }
 
+.btn:hover {
+    transform:scale(1.1);
+}
+
+/* Shine */
+.btn::before {
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
+    left:-100%;
+    transition:0.5s;
+}
+
+.btn:hover::before {
+    left:100%;
+}
+
+/* ===== SECTION ===== */
 .section {
     padding:40px 20px;
     max-width:900px;
     margin:auto;
 }
 
+/* ===== CARDS ===== */
 .cards {
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -73,13 +150,23 @@ body {
 }
 
 .card:hover {
-    transform:translateY(-5px);
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:0 10px 25px rgba(0,198,255,0.3);
 }
 
 h2 {
     color:#38bdf8;
 }
 
+/* LIST */
+ul {
+    padding-left:20px;
+}
+li {
+    margin:8px 0;
+}
+
+/* FOOTER */
 .footer {
     text-align:center;
     padding:20px;
@@ -91,16 +178,28 @@ h2 {
 
 <body>
 
-<!-- HERO -->
+<!-- HERO SLIDER -->
 <div class="hero">
-<div>
-<img src="logo.png" width="90">
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551434678-e076c223a692')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c')"></div>
+
+<div class="hero-content">
+
+<img src="logo.png" class="logo">
 
 <h1>Grow Your Business with Smart ERP Solutions</h1>
+
 <p>Sadiya Zehra | Business Development Manager</p>
+
+<p class="tagline">
+Helping Businesses Grow with Technology, Automation & Marketing 🚀
+</p>
 
 <a class="btn" href="tel:+917549126937">📞 Call</a>
 <a class="btn" href="https://wa.me/917549126937">💬 WhatsApp</a>
+<a class="btn" href="https://www.terasynctech.com" target="_blank">🌐 Website</a>
 
 </div>
 </div>
@@ -110,10 +209,9 @@ h2 {
 <h2>🚀 Our Products</h2>
 
 <div class="cards">
-<div class="card">TeraTrade ERP</div>
-<div class="card">TeraCampus ERP</div>
-<div class="card">TeraHotel ERP</div>
-<div class="card">TeraCard</div>
+<div class="card">TeraTrade ERP – Smart Retail & Inventory</div>
+<div class="card">TeraCampus ERP – Complete School Management</div>
+<div class="card">TeraHotel ERP – Hotel & Hospitality Automation</div>
 </div>
 </div>
 
@@ -122,21 +220,23 @@ h2 {
 <h2>💼 Our Services</h2>
 
 <div class="cards">
-<div class="card">Website Development</div>
-<div class="card">Digital Marketing</div>
-<div class="card">Automation Solutions</div>
+<div class="card">Website Development – Modern & Responsive</div>
+<div class="card">Digital Marketing – SEO, Ads & Growth</div>
+<div class="card">Business Automation – Save Time & Cost</div>
 </div>
 </div>
 
 <!-- WHY -->
 <div class="section">
 <h2>⭐ Why Choose Us</h2>
+
 <ul>
+<li>✔ 100+ Businesses Served</li>
 <li>✔ Fast Implementation</li>
 <li>✔ Expert Team</li>
-<li>✔ Scalable Solutions</li>
-<li>✔ Result Driven</li>
+<li>✔ Result Driven Approach</li>
 </ul>
+
 </div>
 
 <!-- CTA -->
@@ -144,7 +244,8 @@ h2 {
 <h2>🚀 Let’s Grow Your Business</h2>
 
 <a class="btn" href="https://www.terasynctech.com" target="_blank">Visit Website</a>
-<a class="btn" href="contact.vcf" download>Save Contact</a>
+<a class="btn" href="contact.vcf" download>📥 Save Contact</a>
+
 </div>
 
 <div class="footer">
